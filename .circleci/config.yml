@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.10
     working_directory: ~/ops
     #1 Obtain repo from Github
     steps:
@@ -26,5 +26,3 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-  
-   
