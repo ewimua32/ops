@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.10
-    working_directory: ~/devops/ops
+    working_directory: ~/ops
     #1 Obtain repo from Github
     steps:
       - checkout
