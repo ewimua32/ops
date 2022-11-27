@@ -1,9 +1,11 @@
 #Python CircleCI 2.0 configuration file
 version: 2
+orbs:
+  python: circleci/python@1.5.0
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.10
     working_directory: ~/ops
     #1 Obtain repo from Github
     steps:
@@ -23,8 +25,6 @@ jobs:
             flake8 –-exclude=venv* --statistics
             pytest --junitxml=test-results/junit.xml
       - store_test_results:
-          path: test-results
+          path: ~/test-results
       - store_artifacts:
-          path: test-results
-  
-   
+          path: ~/test-results
