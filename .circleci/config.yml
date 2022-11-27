@@ -15,7 +15,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-    #3 Run coding convention software plus tester.
+    #3 Run codin convention software plus tester.
       - run:
           name: run tests
           command: |
