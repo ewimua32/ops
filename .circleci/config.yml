@@ -1,5 +1,7 @@
-#Python CircleCI 2.0 nfiguration file
-version: 2.1
+#Python CircleCI 2.0 configuration file
+version: 2
+orbs:
+  python: circleci/python@1.5.0
 jobs:
   build:
     docker:
